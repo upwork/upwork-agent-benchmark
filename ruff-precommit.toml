@@ -1,0 +1,82 @@
+# General Ruff configuration file. This is checked during pre-commits.
+target-version = "py312"
+line-length = 120
+indent-width = 2
+src = ["src"]
+exclude = ["**/*.ipynb", "**/*.pyi"]
+
+[format]
+quote-style = "single"
+docstring-code-format = true
+docstring-code-line-length = 88
+
+[lint]
+select = [
+  "A001",
+  "A002",
+  "A003",
+  "ARG001",
+  "ARG002",
+  "ARG003",
+  "ARG004",
+  "ARG005",
+  "F401",
+]
+extend-select = [
+  "E501", # line-too-long
+  "I001", # unsorted-imports
+]
+extend-ignore = [
+  "B009",    # Do not call getattr with a constant attribute
+  "E731",    # Rewrite lambda as def
+  "EM101",   # Exception must not use a string literal, assign to variable first
+  "EM102",   # Exception must not use an f-string literal, assign to variable first
+  "G004",    # Logging statement uses f-string
+  "PERF",    # Perflint
+  "PLR2004", # Magic value used in comparison
+  "PLR5501", # Use elif instead of else if
+  "RET504",  # Unnecessary assignment before `return` statement
+  "RET505",  # Unnecessary `else` after `return` statement
+  "RUF005",  # Consider iterable unpacking instead of concatenation
+  "RUF009",  # Do not perform function call in dataclass defaults
+  "RUF015",  # Replace list(x)[0] with next(iter(x))
+  "RUF017",  # Avoid quadratic list summation
+  "S108",    # Probable insecure usage of temporary file or directory
+  "S311",    # Standard pseudo-random generators are not suitable for cryptographic purposes
+  "S602",    # Subprocess call with `shell=True`
+  "SIM102",  # Nesting if statements
+  "SIM103",  # Return boolean condition directly
+  "SIM108",  # Use ternary operator instead of `if`-`else`-block
+  "SIM114",  # Combine `if` branches using logical `or` operator
+  "T201",    # `print` found
+  "TC001",   # Move import into type-checking block
+  "TRY003",  # Avoid specifying long messages outside the exception class
+  "TRY004",  # Type checks should raise TypeError
+  "UP007",   # Use `X | Y` for type annotations
+  "UP038",   # Use `X | Y` for isinstance and issubclass checks
+]
+
+[lint.per-file-ignores]
+"__init__.py" = [
+  "PLC0414", # Import alias does not rename original package
+  "E402",    # Import not at top of file
+]
+"tests/**" = [
+  "S101",    # Use of `assert` detected
+  "PLC1901", # PLR2004
+  "PLR6301", # S
+  "TID252",
+]
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
+
+[lint.flake8-tidy-imports]
+ban-relative-imports = "parents"
+
+[lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false

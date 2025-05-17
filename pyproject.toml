@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "agent_arena"
+version = "0.0.1"
+description = "Arena to evaluate agents abilities to complete jobs on upwork"
+authors = [
+  "Mattie Terzolo <mattieterzolo@upwork.com>",
+  "Darvin Yi <darvinyi@upwork.com>"
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">= 3.10, <4.0"
+shandy-sqlfmt = ">=0.26.0"
+pandas = ">=2.2.3"
+numpy = ">=2.2.5"
+matplotlib = ">=3.10.1"
+seaborn = ">=0.13.2"
+openai = ">=1.76.2"
+jupyter = ">=1.1.1"
+python-dotenv = ">=1.1.0"
+py7zr = "^0.22.0"
+rarfile = "^4.0"
+python-docx = "^1.1.0"
+pypdf2 = "^3.0.1"
+llama-index = "^0.12.35"
+docx2txt = "^0.9"
+openpyxl = "^3.1.5"
+xlrd = "^2.0.1"
+transformers = "^4.51.3"
+python-pptx = "^1.0.2"
+pillow = "^11.2.1"
+torch = "^2.7.0"
+llama-index-llms-fireworks = "^0.3.2"
+reportlab = "^4.4.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

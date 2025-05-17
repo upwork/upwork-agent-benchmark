@@ -1,0 +1,14 @@
+# Ruff configuration file for IDEs/hatch fmt. A bit stricter about documentation.
+extend = "ruff-precommit.toml"
+
+[lint]
+extend-select = [
+  "D", # pydocstyle
+]
+extend-ignore = [
+  "D102", # Undocumented public method.
+  "D106", # Missing docstring in public nested class.
+  "D417", # Documentation for every function parameter.
+]
+pydocstyle.ignore-decorators = ["typing.override", "override"]
+pydocstyle.convention = "google"

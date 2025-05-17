@@ -54,3 +54,14 @@ build-iPhoneSimulator/
 
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
+
+.idea/*
+venv/*
+scripts/.python-version
+.python-version
+dist/*
+**/__pycache__/
+wandb/*
+wandb_runs/*
+data/*
+notebooks/*

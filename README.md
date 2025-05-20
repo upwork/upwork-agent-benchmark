@@ -1,7 +1,5 @@
 # Upwork Agent Benchmark
 
-# Agent Arena Modular
-
 ## Getting Started
 
 ### 1. Install software prerequisites

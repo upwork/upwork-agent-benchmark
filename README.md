@@ -22,17 +22,17 @@ FIREWORKS_API_KEY=<your_fireworks_api_key>
 
 ## Running the benchmark
 
-### 1. Pull data from snowflake
+### 1. Get the dataset
+Download the dataset from <todo add link to dataset> and run the get_dataset.py script to unpack the contents in the correct location
 
 Execute the data extraction script
 ```commandline
-TODO: create the script
+python src/create_dataset.py --tar_path=<path_to_tar_file>
 ```
 
 Take note of the directory where assets are saved:
 ```
-INFO:root:Completed processing 1 projects per category.
-INFO:root:Completed extracting data to: data/raw/20250516_143205
+2025-05-16 14:37:40 - root - INFO - Extracting ~/Downloads/paper_submission.tar to data/...
 ```
 
 ### 2. Qualify Jobs with the qualification agent

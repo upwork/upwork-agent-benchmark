@@ -12,8 +12,8 @@ from typing import Dict, List, Optional
 
 from llama_index.core.llms import LLM
 
-from agent_arena.agents import base
-from agent_arena.tools import input_tools, output_tools
+from agent_benchmark.agents import base
+from agent_benchmark.tools import input_tools, output_tools
 
 
 def create_prompt(project_path: str, submission_dir: str, execution_timestamp: str) -> str:

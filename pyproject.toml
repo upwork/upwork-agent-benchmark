@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "agent_arena"
+name = "agent_benchmark"
 version = "0.0.1"
 description = "Arena to evaluate agents abilities to complete jobs on upwork"
 authors = [

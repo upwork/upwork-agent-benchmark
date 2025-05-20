@@ -12,8 +12,8 @@ from typing import Dict, List, Optional
 
 from llama_index.core.llms import LLM
 
-from agent_arena.agents import base
-from agent_arena.tools import input_tools, output_tools
+from agent_benchmark.agents import base
+from agent_benchmark.tools import input_tools, output_tools
 
 EVAL_FILE_PREFIX = 'llm_eval'
 
@@ -41,9 +41,6 @@ def create_prompt(project_dir: str, execution_timestamp: str) -> str:
         information in the project description alone.
       2. The milestone descriptions are well-defined and someone without context of the client or freelancer would be 
         able to understand what was agreed to.
-      3. The deliverables contain the actual work described and not just a link or a screenshot proving the work was 
-        completed. It is ok if the formats are slightly different or if some of the information requested isn't exacted 
-        contained.
 
       Create a json report called {EVAL_FILE_PREFIX}_{execution_timestamp}.json and put it in the project_dir with the following 
       structure:
@@ -53,9 +50,6 @@ def create_prompt(project_dir: str, execution_timestamp: str) -> str:
       
       criterion_2_judgment: [YES/NO]
       criterion_2_reasoning: [Your detailed explanation]
-      
-      criterion_3_judgment: [YES/NO]
-      criterion_3_reasoning: [Your detailed explanation]
       
       Finally respond with SUCCESS if you were able to complete the request successfully and FAILED if you were unable to 
       complete for any reason.

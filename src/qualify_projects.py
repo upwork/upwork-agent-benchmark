@@ -5,7 +5,7 @@ import argparse
 import asyncio
 import logging
 
-from agent_arena.agents.qualification import QualificationRunner
+from agent_benchmark.agents.qualification import QualificationRunner
 
 
 def main():

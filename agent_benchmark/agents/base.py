@@ -11,7 +11,7 @@ from llama_index.core.workflow import Context
 from llama_index.llms.fireworks import Fireworks
 from llama_index.llms.openai import OpenAI
 
-from agent_arena.tools import input_tools
+from agent_benchmark.tools import input_tools
 
 AGENT_STREAM_PREFIX = 'agent_stream'
 

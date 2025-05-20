@@ -6,8 +6,8 @@ import logging
 import os
 import shutil
 
-from agent_benchmark.agents.base import AGENT_STREAM_PREFIX
-from agent_benchmark.agents.qualification import EVAL_FILE_PREFIX
+from upwork_agent_benchmark.agents.base import AGENT_STREAM_PREFIX
+from upwork_agent_benchmark.agents.qualification import EVAL_FILE_PREFIX
 
 
 def check_criteria(eval_file_path: str, criteria_list: list[str]):

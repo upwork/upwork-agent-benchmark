@@ -5,7 +5,7 @@ import argparse
 import asyncio
 import logging
 
-from agent_benchmark.agents.worker import WorkerRunner
+from upwork_agent_benchmark.agents.worker import WorkerRunner
 
 
 def main():
